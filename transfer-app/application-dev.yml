@@ -1,0 +1,12 @@
+server:
+  port: 8092
+  servlet:
+    context-path: /api/transfer
+management:
+  server:
+    port: 8191
+spring:
+  liquibase:
+    default-schema: transfer
+  application:
+    name: transfer-app
