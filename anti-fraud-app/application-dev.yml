@@ -1,1 +1,24 @@
+server:
+  port: 8086
+  servlet:
+    context-path: /api/anti-fraud
 
+management:
+  server:
+    port: 8186
+
+spring:
+  liquibase:
+    default-schema: anti_fraud
+  application:
+    name: anti-fraud-app
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: full
+  circuitbreaker:
+    enabled: true
